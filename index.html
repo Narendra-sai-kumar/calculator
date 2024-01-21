@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/b33557c621.js" crossorigin="anonymous"></script>
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+<body>
+    <script  src ="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+
+<div ng-app="myApp" ng-controller="customersCtrl"> 	
+	<div >
+		<h1 class="calculator-header">Calculator Program in Javascript</h1>
+	</div>
+	
+	<div class="calculator">
+		<div class="display-top">
+			<input type="text" ng-model="res.time_" id="time-display" readonly="true" >
+			
+			<div class="toggle-mode">
+				<input type= "checkbox" id="checkboxid" class="check-box">
+				<label for="checkboxid" class="checkbox-label">
+					<i class="fas fa-sun"></i>
+					<i class="fas fa-moon"></i>
+					<span class="ball"></span>
+				</label>
+			</div>
+			<div class="icons">
+				<i class="fas fa-signal"><span style="font-size:12px"> <sup>5G</sup></span></i>
+				<i class="fas fa-wifi"> <i class="fas fa-sort" style="font-size:10px"></i></i>
+				<i class="fas fa-battery-three-quarters"></i>
+			</div>
+		</div>
+	
+		<div >
+			<input type="text" ng-model="res.display" id="input-display" readonly="true" class="input-box">
+		</div>
+		<div class="buttons">
+			<div class="">
+				<button ng-click="num_click('square')"><i>x<sup>2</sup></i></button>	
+				<button ng-click="num_click('root')"><i><sup>2</sup>&#8730;x</button>
+				<button id="power" ng-if="power_mode == 'on'" ng-click="power_button('on')" style="background-color:red">OFF</button>
+				<button id="power" ng-if="power_mode == 'off'"  ng-click="power_button('off')" style="background-color:green">ON</button>
+			</div>
+			<div class="">
+				<button ng-click="num_click('(')">(</button>	
+				<button ng-click="num_click(')')">)</button>
+				<button ng-click="num_click('Clear')">C</button>
+			</div>
+			
+			<div class="">
+				<button ng-click="num_click('/')">/</button>
+				<button ng-click="num_click('%')">%</button>	
+				<button ng-click="num_click('X')">X</button>
+			</div>
+			<div class="">
+				<button ng-click="num_click('+')">+</button>
+				<button ng-click="num_click('-')">-</button>
+				<button ng-click="num_click('*')">*</button>
+			</div>
+		</div>
+		<div class="numbers">
+			<div class="">
+				<button ng-click="num_click('1')">1</button>
+				<button ng-click="num_click('2')">1</button>
+				<button ng-click="num_click('3')">3</button>
+			</div>
+			<div class="">
+				<button ng-click="num_click('4')">4</button>
+				<button ng-click="num_click('5')">5</button>
+				<button ng-click="num_click('6')">6</button>
+			</div>
+			<div class="">
+				<button ng-click="num_click('7')">7</button>
+				<button ng-click="num_click('8')">8</button>
+				<button ng-click="num_click('9')">9</button>
+			</div>
+			<div class="">
+				<button ng-click="num_click('.')">.</button>
+				<button ng-click="num_click('0')">0</button>
+				<button ng-click="num_click('=')">=</button>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>
